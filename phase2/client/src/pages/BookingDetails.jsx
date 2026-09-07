@@ -1,0 +1,5 @@
+import Button from '../components/common/Button'
+
+export default function BookingDetails() {
+  return <main className="page-shell"><section className="booking-detail container"><a className="back-link" href="/bookings">← My bookings</a><div className="confirmation-mark">✓</div><p className="eyebrow">Confirmed booking · SLY-482091</p><h1>India vs Australia</h1><p className="muted">Your tickets are reserved. Entry details have been sent to aarav@example.com.</p><div className="ticket-card"><div><span className="eyebrow">14 March 2026 · 7:30 PM</span><h2>Wankhede Stadium</h2><p>Mumbai · Gate 3 opens at 5:30 PM</p></div><div className="ticket-seats"><span>Seats</span><strong>P-R01-S042 · P-R01-S043</strong></div><div><span className="eyebrow">Total paid</span><strong className="ticket-price">₹10,250</strong></div></div><div className="booking-actions"><Button type="button" variant="quiet">Download ticket</Button><Button href="/events" variant="quiet">Browse more matches</Button></div></section></main>
+}

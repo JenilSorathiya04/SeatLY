@@ -1,0 +1,5 @@
+import Button from '../components/common/Button'
+
+export default function Profile() {
+  return <main className="page-shell"><section className="container profile-page"><p className="eyebrow">Account settings</p><h1>Your profile.</h1><div className="profile-layout"><nav className="profile-nav"><a className="is-active" href="/profile">Personal information</a><a href="/profile">Password & security</a><a href="/profile">Booking preferences</a></nav><section className="profile-card"><h2>Personal information</h2><p className="muted">Keep your contact details current for ticket updates.</p><div className="profile-fields"><label>Full name<input defaultValue="Aarav Mehta" /></label><label>Email address<input defaultValue="aarav@example.com" type="email" /></label><label>Phone number<input defaultValue="+91 98765 43210" type="tel" /></label></div><Button type="button">Save changes</Button></section></div></section></main>
+}

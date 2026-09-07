@@ -1,0 +1,8 @@
+import Button from '../components/common/Button'
+
+export default function Auth({ mode = 'login' }) {
+  const isRegister = mode === 'register'
+  const isForgot = mode === 'forgot'
+  const title = isRegister ? 'Create your SeatLY account.' : isForgot ? 'Reset your password.' : 'Welcome back.'
+  return <main className="auth-page"><div className="auth-art"><a className="brand brand--light" href="/">SeatLY</a><p>Every seat has a story.<br />Choose yours from the best view.</p></div><section className="auth-form"><a className="back-link" href="/">← Back home</a><p className="eyebrow">SeatLY account</p><h1>{title}</h1><p className="muted">{isForgot ? 'Enter your email and we will send a reset link.' : isRegister ? 'Save bookings and return to your favourite seats faster.' : 'Sign in to see your bookings and saved events.'}</p>{!isForgot && isRegister && <label>Full name<input placeholder="Aarav Mehta" /></label>}<label>Email address<input type="email" placeholder="you@example.com" /></label>{!isForgot && <label>Password<input type="password" placeholder="••••••••" /></label>}<Button type="button">{isForgot ? 'Send reset link' : isRegister ? 'Create account' : 'Sign in'} <span aria-hidden="true">→</span></Button><div className="auth-links">{!isRegister && !isForgot && <a href="/forgot-password">Forgot password?</a>}{!isForgot && <a href={isRegister ? '/login' : '/register'}>{isRegister ? 'Already have an account? Sign in' : 'New to SeatLY? Create an account'}</a>}{isForgot && <a href="/login">Back to sign in</a>}</div></section></main>
+}
